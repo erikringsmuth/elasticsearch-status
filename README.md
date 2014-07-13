@@ -1,5 +1,5 @@
 ## elasticsearch-status
-See the [component page](http://polymerlabs.github.io/elasticsearch-status) for more information.
+See the [component page](http://erikringsmuth.github.io/elasticsearch-status) for more information.
 
 ## Usage
 ```html
