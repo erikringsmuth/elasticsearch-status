@@ -1,0 +1,7 @@
+{
+  "name": "elasticsearch-status#gh-pages",
+  "private": true,
+  "dependencies": {
+    "elasticsearch-status": "erikringsmuth/elasticsearch-status#master"
+  }
+}

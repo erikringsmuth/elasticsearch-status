@@ -1,0 +1,29 @@
+{
+  "name": "elasticsearch-status",
+  "authors": [
+    "Erik Ringsmuth <erik.ringsmuth@gmail.com>"
+  ],
+  "description": "Elasticsearch status.",
+  "keywords": "elasticsearch, polymer, web-components",
+  "main": "elasticsearch-status.html",
+  "license": "MIT",
+  "homepage": "https://github.com/erikringsmuth/elasticsearch-status/",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.3",
+    "polymer-test-tools": "Polymer/polymer-test-tools#~0.3.3",
+    "core-ajax": "Polymer/core-ajax#~0.3.4"
+  },
+  "_release": "868179a676",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "868179a6760fe6bcd0b034c1d1a8a803d27975ff"
+  },
+  "_source": "git://github.com/erikringsmuth/elasticsearch-status.git",
+  "_target": "master",
+  "_originalSource": "erikringsmuth/elasticsearch-status",
+  "_direct": true
+}

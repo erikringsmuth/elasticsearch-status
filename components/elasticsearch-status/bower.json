@@ -1,0 +1,20 @@
+{
+  "name": "elasticsearch-status",
+  "version": "0.0.1",
+  "authors": [
+    "Erik Ringsmuth <erik.ringsmuth@gmail.com>"
+  ],
+  "description": "Elasticsearch status.",
+  "keywords": "elasticsearch, polymer, web-components",
+  "main": "elasticsearch-status.html",
+  "license": "MIT",
+  "homepage": "https://github.com/erikringsmuth/elasticsearch-status/",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.3",
+    "polymer-test-tools": "Polymer/polymer-test-tools#~0.3.3",
+    "core-ajax": "Polymer/core-ajax#~0.3.4"
+  }
+}

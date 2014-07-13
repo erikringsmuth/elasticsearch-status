@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>elasticsearch-status Demo</title>
+  <script src="../platform/platform.js"></script>
+  <link rel="import" href="../polymer/polymer.html">
+  <link rel="import" href="elasticsearch-status.html">
+</head>
+<body unresolved>
+  <template is="auto-binding">
+    <p>Example <code>elasticsearch-status</code> on host <input type="text" value="{{host}}"></p>
+    <h2>Custom element</h2>
+    <code>&lt;elasticsearch-status host="{{host}}"&gt;&lt;/elasticsearch-status&gt;</code>
+    <h2>Result</h2>
+    <elasticsearch-status host="{{host}}"></elasticsearch-status>
+  </template>
+</body>
+</html>

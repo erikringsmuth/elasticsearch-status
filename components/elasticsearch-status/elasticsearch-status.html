@@ -1,0 +1,45 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-ajax/core-ajax.html">
+
+<!--
+Display the elasticsearch `/_status` endpoint.
+
+##### Example
+  <elasticsearch-status host="http://localhost:9200"></elasticsearch-status>
+
+@element elasticsearch-status
+@status alpha
+@homepage http://erikringsmuth.github.io/elasticsearch-status
+-->
+<polymer-element name="elasticsearch-status" attributes="host response">
+  <template>
+    <link rel="stylesheet" href="elasticsearch-status.css" />
+    <core-ajax url="{{host}}/_status" auto handleAs="json" response="{{response}}"></core-ajax>
+    <pre>{{status}}</pre>
+  </template>
+  <script>
+    Polymer('elasticsearch-status', {
+      /**
+       * Sets the `host`
+       * 
+       * @attribute host
+       * @type string
+       * @default 'http://localhost:9200'
+       */
+      host: 'http://localhost:9200',
+
+      /**
+       * Gets the `response` data
+       * 
+       * @attribute response
+       * @type object
+       * @default ''
+       */
+      response: '',
+
+      responseChanged: function(oldResponse, newResponse) {
+        this.status = JSON.stringify(newResponse, null, 2);
+      }
+    });
+  </script>
+</polymer-element>
