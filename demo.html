@@ -8,8 +8,12 @@
   <link rel="import" href="elasticsearch-status.html">
 </head>
 <body unresolved>
+  <style>
+    body { font-family: sans-serif; }
+  </style>
   <template is="auto-binding">
     <p>Example <code>elasticsearch-status</code> on host <input type="text" value="{{host}}"></p>
+    <p>This will call <code>GET {{host}}/_status</code>.</p>
     <h2>Custom element</h2>
     <code>&lt;elasticsearch-status host="{{host}}"&gt;&lt;/elasticsearch-status&gt;</code>
     <h2>Result</h2>

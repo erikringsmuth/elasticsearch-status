@@ -1,6 +1,6 @@
 {
   "name": "elasticsearch-status",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "authors": [
     "Erik Ringsmuth <erik.ringsmuth@gmail.com>"
   ],
@@ -19,6 +19,7 @@
   "dependencies": {
     "polymer": "Polymer/polymer",
     "platform": "Polymer/platform",
-    "core-ajax": "Polymer/core-ajax"
+    "core-ajax": "Polymer/core-ajax",
+    "elasticsearch-index-status": "erikringsmuth/elasticsearch-index-status"
   }
 }

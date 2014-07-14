@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../core-ajax/core-ajax.html">
+<link rel="import" href="../elasticsearch-index-status/elasticsearch-index-status.html">
 
 <!--
 Display the elasticsearch `/_status` endpoint.
@@ -15,7 +16,14 @@ Display the elasticsearch `/_status` endpoint.
   <template>
     <link rel="stylesheet" href="elasticsearch-status.css" />
     <core-ajax url="{{host}}/_status" auto handleAs="json" response="{{response}}"></core-ajax>
-    <pre>{{status}}</pre>
+    <h2>Shards</h2>
+    <p>{{response._shards.total}}, {{response._shards.successful}} successful, {{response._shards.failed}} failed.</p>
+    <h2>Indices</h2>
+    <template repeat="{{index in indices}}">
+      <elasticsearch-index-status index="{{index}}" response="{{response}}"></elasticsearch-index-status>
+    </template>
+    <h2>raw response</h2>
+    <pre>{{displayResponse}}</pre>
   </template>
   <script>
     Polymer('elasticsearch-status', {
@@ -29,16 +37,16 @@ Display the elasticsearch `/_status` endpoint.
       host: 'http://localhost:9200',
 
       /**
-       * Gets the `response` data
+       * Gets or sets the `response` data
        * 
        * @attribute response
        * @type object
-       * @default ''
+       * @default undefined
        */
-      response: '',
 
       responseChanged: function(oldResponse, newResponse) {
-        this.status = JSON.stringify(newResponse, null, 2);
+        this.indices = Object.keys(newResponse.indices);
+        this.displayResponse = JSON.stringify(newResponse, null, 2);
       }
     });
   </script>
